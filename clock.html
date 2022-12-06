@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鸭子表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clock {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /*background-image: url("./assets/clock_bg.jpg");*/
+            background-image: url("./assets/clock_bg2.webp");
+            background-size: cover;
+            margin: 300px auto;
+            border-radius: 50%;
+            border: 5px solid #ccc;
+        }
+
+        @keyframes runs {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes runm {
+            from {
+                transform: rotate(90deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes runh {
+            from {
+                transform: rotate(180deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .sw,.mw,hw {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        .sw {
+            z-index: 99;
+            animation: runs 60s infinite steps(60) ;
+        }
+        .mw {
+            animation: runm 3600s infinite steps(60) ;
+        }
+        .hw {
+            animation: runh 216000s infinite steps(60) ;
+        }
+        .s, .m, .h{
+            height: 100px;
+            margin: 0 auto;
+        }
+        .s {
+            margin-top: 3px;
+            height: 110px;
+            background-color: silver;
+            width: 2px;
+        }
+        .m {
+            margin-top: 10px;
+            height: 95px;
+            background-color: skyblue;
+            width: 3px;
+        }
+        .h{
+            margin-top: 20px;
+            height: 85px;
+            background-color: tomato;
+            width: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="clock">
+    <div class="sw">
+        <div class="s"></div>
+    </div>
+    <div class="mw">
+        <div class="m"></div>
+    </div>
+    <div class="hw">
+        <div class="h"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性变量和计算函数</title>
+    <style>
+        html {
+            --primary: deeppink;
+            --secondary : orange;
+        }
+        .box{
+            width: 640px;
+            border: 1px green solid;
+            height: 200px;
+        }
+        .box1,.box2,.box3{
+            float: left;
+            width: calc(600px/3) ;
+            height: 200px;
+            margin-left: 10px;
+        }
+        .box1{
+          background-color: var(--primary);
+        }
+        .box2{
+            border:  10px solid var(--primary);
+            box-sizing: border-box;
+        }
+        .box3{
+            color: var(--primary);
+            background-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">box3</div>
+</div>
+
+</body>
+</html>

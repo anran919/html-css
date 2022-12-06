@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position,绝对定位</title>
+    <style>
+        .box1,.box2,.box3,.box4,.box5,.box6 ,.box7,.box8,.box9,.box10,.box11,.box12{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 4rem;
+            color: white;
+        }
+        .clear-fix::before,
+        .clear-fix::after {
+            display: table;
+            clear: both;
+            content: '';
+        }
+
+        .box1 {
+            background-color: orange;
+        }
+        .box2 {
+            background-color: deeppink;
+            position: relative;
+            left: 100px;
+            top: -100px;
+        }
+
+        .box3 {
+            background-color: skyblue;
+            position: relative;
+            top: -100px;
+        }
+
+        .box4 {
+            background-color: aqua;
+            position: absolute;
+            top: 320px;
+        }
+        .box5 {
+            background-color: deepskyblue;
+            position: absolute;
+            top: 420px;
+        }
+
+        .box6 {
+            background-color: lightsalmon;
+            position: absolute;
+            top: 520px;
+        }
+        .box7{
+            position: fixed;
+            left: 200px;
+            bottom: 600px;
+            background-color: tomato;
+        }
+        .box8{
+            position: fixed;
+            left: 400px;
+            bottom: 600px;
+            background-color: darkorchid;
+        }
+        .box9{
+            position: fixed;
+            bottom: 600px;
+            left: 600px;
+            background-color: greenyellow;
+        }
+
+        .box10{
+            background-color: deepskyblue;
+        }
+        .box11{
+            background-color: deeppink;
+        }
+        .box12{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+<main style="height: 2400px">
+    <article>
+        <article>
+            <h3>relative,相对定位</h3>
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </article>
+        <article style="margin-top: -100px">
+            <h3>absolute,绝对定位定位</h3>
+            <div class="box4">4</div>
+            <div class="box5">5</div>
+            <div class="box6">6</div>
+        </article>
+
+        <article style="margin-top: 350px">
+            <h3>fix,固定定位</h3>
+            <div class="box7">7</div>
+            <div class="box8">8</div>
+            <div class="box9">9</div>
+        </article>
+
+        <article style="position: sticky;top: 10px">
+            <h3>fix,粘滞定位</h3>
+            <div class="box10">10</div>
+            <div class="box11">11</div>
+            <div class="box12">12</div>
+        </article>
+    </article>
+
+</main>
+</body>
+</html>

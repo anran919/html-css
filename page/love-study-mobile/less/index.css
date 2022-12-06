@@ -1,0 +1,154 @@
+@import "../../../css/reset.css";
+@import "../../../font/css/all.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.w,
+.top-bar,
+.banner,
+.course {
+  width: 693/40rem;
+  margin: 0 auto;
+}
+html {
+  font-size: 100vw/30000;
+  background-color: #eff0f4;
+}
+.top-bar {
+  margin-top: 1rem;
+  display: flex;
+  height: 175/40rem;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+.top-bar .logo a {
+  color: deeppink;
+  font-size: 24px;
+}
+.top-bar .search-btn i,
+.top-bar .menu-btn i {
+  color: green;
+}
+.banner {
+  margin-top: 1rem;
+}
+.banner ul {
+  height: 13rem;
+}
+.banner ul li {
+  width: 100%;
+  height: 211px;
+  display: none;
+  position: absolute;
+  padding: 0 0.5rem;
+}
+.banner ul img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner ul li:nth-child(3) {
+  display: block;
+}
+.category {
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+.category ul:nth-child(1) li:nth-child(1) {
+  background-color: #f76547;
+  border-radius: 10px;
+}
+.category ul:nth-child(1) li:nth-child(2) {
+  border-radius: 10px;
+  background-color: #bc4dfd;
+}
+.category ul:nth-child(2) {
+  margin-top: 1rem;
+}
+.category ul:nth-child(2) li:nth-child(1) {
+  background-color: #fd3265;
+  border-radius: 10px;
+}
+.category ul:nth-child(2) li:nth-child(2) {
+  border-radius: 10px;
+  background-color: #1a88fe;
+}
+.category div ul {
+  display: flex;
+  height: 4rem;
+}
+.category div ul li {
+  flex-grow: 1;
+}
+.category div ul li a {
+  color: #FFF;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category div ul li span {
+  margin-left: 0.5rem;
+}
+.category div ul li:nth-child(1) {
+  margin-right: 0.5rem;
+}
+.category div ul li:nth-child(2) {
+  margin-left: 0.5rem;
+}
+.course div {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.course div span {
+  display: flex;
+  align-items: center;
+}
+.course div :nth-child(2) {
+  color: #aaa;
+}
+.course div .line {
+  width: 0.2rem;
+  height: 1rem;
+  background-color: deeppink;
+  display: block;
+  margin-right: 1rem;
+}
+.course .card-list {
+  display: flex;
+  overflow: auto;
+}
+.course .card-list li {
+  padding: 0.5rem;
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-left: 1rem;
+  flex: none;
+}
+.course .card-list li h3 {
+  font-size: 16px;
+}
+.course .card-list li img {
+  height: 5.5rem;
+}
+.course .card-list li div {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #aaa;
+}
+.course .card-list li div img {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=index.css.map */

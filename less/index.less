@@ -1,0 +1,85 @@
+// 引用,实现模块化
+@import "../css/reset.css";
+
+// 变量
+@primary-color: deeppink;
+@second-color: green;
+@w-width: 800px;
+@b-width: 200px;
+@class-box3: box3;
+
+
+body {
+  div {
+    width: @w-width;
+    height: 200px;
+    float: left;
+
+    .box1 {
+      width: @b-width;
+      background-color: @second-color;
+    }
+
+    .box2 {
+      width: @b-width;
+      background-color: @primary-color;
+    }
+
+    // 设置类名变量
+    .@{class-box3} {
+      width: @b-width;
+       background-color: orange;
+    }
+    .box4{
+      background-color: @primary-color;
+      width: 200px;
+      // 引用其他属性的值
+      height: $width;
+    }
+    // & 代表父元素
+    &:hover{
+      background-color: pink;
+    }
+  }
+}
+
+.box5{
+  width: 200px;
+  height: 300px;
+}
+// 继承box5的属性,方式一
+.box6:extend(.box5){
+  background-color: deepskyblue;
+}
+
+// 继承box5的属性,方式二,混合函数
+.box7{
+  .box5();
+  background-color: purple;
+}
+// 声明混合函数,mixins 常用
+.wh-base(){
+  width: 200px;
+  height: 200px;
+}
+.box8 {
+  //使用mixins
+  .wh-base();
+  background-color: yellow;
+}
+// mixins 函数声明 使用,可以传参和使用默认值
+.mix-wh(@w:100px,@h:200px,@b-color:orange){
+  width: @w;
+  height: @h;
+  background-color: @b-color;
+}
+// mixins 函数声明 使用
+.box9{
+  .mix-wh(300px,400px,pink);
+}
+// 使用默认值,和选择性传参/使用函数取平均值/ 数值运算
+.box10{
+  .mix-wh(100px,@b-color: average(green,deeppink));
+ width: 100px+100*2px;
+}
+

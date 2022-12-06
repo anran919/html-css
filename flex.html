@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex,弹性布局,主要替代浮动</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box1{
+            width: 1000px;
+            list-style: none;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .box1 li {
+            /*flex: 1;*/
+            /*flex-grow: 1;*/
+            /*width: 200px;*/
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 li:nth-child(1){
+            flex-grow: 1;
+            background-color: skyblue;
+        }
+        .box1 li:nth-child(2){
+            flex-grow: 2;
+            background-color: yellow;
+        }
+        .box1 li:nth-child(3){
+            flex-grow: 3;
+            background-color: deeppink;
+        }
+        .box2 {
+            margin-top: 10px;
+            background-color: yellow;
+            border: 5px deeppink  solid;
+            width: 600px;
+            height: 200px;
+            display: flex;
+        }
+        .box2 li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2 li:nth-child(1){
+            flex-shrink: 2;
+            width: 400px;
+            background-color: orange;
+        }
+        .box2 li:nth-child(2){
+            width: 300px;
+            flex-shrink: 2;
+            background-color: tomato;
+        }
+        .box2 li:nth-child(3){
+            width: 600px;
+            flex-shrink: 2;
+            background-color: chartreuse;
+        }
+        .nav{
+            height: 40px;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: silver;
+            display: flex;
+            list-style: none;
+        }
+        .nav li {
+            flex: 1;
+        }
+        .nav li a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            height: 100%;
+            width: 100%;
+        }
+        .nav li :hover{
+            color: white;
+            background-color: deeppink;
+        }
+        .box3 {
+            width: 500px;
+            height: 200px;
+            display: flex;
+            border: 5px solid green;
+            flex-wrap: wrap;
+        }
+        .box3 li:nth-child(1) {
+            order: 3;
+            background-color: yellow;
+            width: 200px;
+        }
+        .box3 li:nth-child(2) {
+            background-color: skyblue;
+            width: 300px;
+            order: 2;
+        }
+        .box3 li:nth-child(3) {
+            /* 排序*/
+            order: 1;
+            align-self: flex-start;
+            background-color: tomato;
+            width: 200px;
+        }
+
+        .tb {
+            background-color: #b0b0b0;
+            width: 100%;
+        }
+        .nav-list{
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .nav-list li {
+            width: 18%;
+            display: flex;
+            justify-content: center
+
+        }
+        .nav-list img {
+            width: 100%;
+            max-width: 120px;
+        }
+
+        .nav-list a {
+            color: slategray;
+            text-align: center;
+        }
+        .nav-list a span {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="nav">
+            <li><a href="#">HTML/CSS</a></li>
+            <li><a href="#">Browser Side</a></li>
+            <li><a href="#">Server Side</a></li>
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">XML</a></li>
+            <li><a href="#">Web Building</a></li>
+            <li><a href="#">Reference</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="tb">
+    <ul class="nav-list">
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb1.webp"><span>天猫</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb2.webp"><span>聚划算</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb3.webp"><span>天猫国际</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb4.webp"><span>外卖</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb5.webp"><span>天猫超市</span></a></li>
+    </ul>
+    <ul class="nav-list">
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb6.webp"><span>充值中心</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb7.webp"><span>飞猪旅行</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb8.webp"><span>领金币</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb9.webp"><span>拍卖</span></a></li>
+        <li><a href="#"><img src="" alt="" srcset="./assets/images/tb10.webp"><span>分类</span></a></li>
+    </ul>
+</div>
+<ul class="box1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul class="box2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul class="box3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+</body>
+</html>

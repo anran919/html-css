@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>z-index,优先级</title>
+    <style>
+        .box1,.box2,.box3{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .box1{
+            left: 50px;
+            top: 50px;
+            background-color: tomato;
+            z-index: 100;
+        }
+        .box2 {
+            left: 100px;
+            top: 100px;
+            background-color: orange;
+            z-index: 99;
+        }
+        .box3 {
+            left: 150px;
+            top: 150px;
+            background-color: skyblue;
+            z-index: 98;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+</body>
+</html>

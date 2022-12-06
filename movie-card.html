@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./font/css/all.css">
+    <title>电影卡片</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: linear-gradient(90deg, deeppink, pink, springgreen,skyblue);
+        }
+        .card {
+            background-color: white;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        }
+
+        .image img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        .title, line, .des, .line, .other {
+            padding: 0 18px;
+        }
+
+        .des {
+            color: #b0b3b0;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: hidden;
+            margin-top: 16px;
+            margin-bottom: 18px;
+            text-overflow: ellipsis;
+        }
+
+        .other {
+            height: 46px;
+            line-height: 46px;
+        }
+
+        .other .star {
+            list-style: none;
+            margin: 0px;
+            float: left;
+        }
+
+        .other > ul li:nth-child(n+3) i {
+            color: #bbb;
+        }
+
+        .other > ul li:nth-child(-n+2) i {
+            color: dodgerblue;
+        }
+
+        .star > li {
+            list-style: none;
+            float: left;
+        }
+
+        .star {
+            float: left;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .share {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #bbb;
+            float: right;
+        }
+
+        .share .fa {
+            color: #bbb !important;
+        }
+
+        .line {
+            height: 1px;
+            background-color: #bbb;
+        }
+
+        .title h3 {
+            padding: 0;
+            font-size: 18px;
+            color: #717171;
+            margin: 15px 0 15px 0;
+        }
+
+        .title h4 {
+            padding: 0;
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .title h4 i {
+            color: #bbb;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="root">
+    <div class="card">
+        <div class="image">
+            <img src="/assets/699170.jpg" alt="海报" srcset="">
+        </div>
+        <div class="title">
+            <h3>Animation films</h3>
+            <h4><i class="fa fa-location-dot"></i> Animation</h4>
+        </div>
+        <div class="des">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad debitis deleniti, modi non nulla quidem quod
+            rem
+            similique velit!
+        </div>
+        <div class="line"></div>
+        <div class="other">
+            <ul class="star">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <ul class="share">
+                <li><i class="fa fa-share"></i></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

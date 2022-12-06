@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景相关的</title>
+    <style>
+        .box1{
+            background-color: darkkhaki;
+            background-image: url('/assets/699170.jpg');
+            background-repeat: no-repeat;
+            background-position: 10px 10px;
+            border: 10px double red;
+            background-clip: border-box ;
+            background-origin: border-box;
+            background-size: contain;
+            width: 1000px;
+            height: 500px;
+            overflow: auto;
+        }
+
+        .box2 {
+            height: 1000px;
+            width: 300px;
+            background-image: url("/assets/843186.png");
+            background-attachment: fixed;
+
+        }
+        .box3{
+            width: 600px;
+            height: 200px;
+            background-image: linear-gradient(45deg, yellow,deeppink);
+        }
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(100px 100px,red,yellow);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+       <div class="box1">
+           <div class="box2">
+           </div>
+       </div>
+        <div class="box3"> </div>
+        <div class="box4"> </div>
+</body>
+</html>

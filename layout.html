@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <link rel="stylesheet" href="./css/global.css">-->
+    <title>文档流,布局</title>
+    <style>
+        div, a, body, article {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .image_list {
+            width: 200px;
+            height: 200px;
+            display: block;
+            color: white;
+        }
+
+        .mb:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .image_list :link {
+            color: green;
+        }
+
+        .image_list :visited {
+            color: yellow;
+        }
+
+        .image_list div {
+            width: 200px;
+            height: 100%;
+            background-color: transparent;
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px transparent solid;
+            margin-top: -206px
+        }
+
+        .list_ul li:hover {
+            background-color: gray;
+        }
+
+        .list_ul li a:hover {
+            color: #c81623;
+        }
+
+        .list_ul {
+            background-color: white;
+            width: 200px;
+            padding-left: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .list_ul li {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+        }
+
+        .list_ul li:not(:first-child) {
+            margin-top: 10px;
+        }
+
+        .news_card {
+            margin: 15px;
+            background-color: white;
+            padding: 20px;
+            width: 310px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+            border-radius: 20px;
+        }
+
+        .news_card h3 {
+            margin-top: -40px;
+            color: white;
+            text-align: center;
+        }
+
+        .news_card h4 {
+            margin-top: -2px;
+            border-top: 2px solid red;
+            display: inline-block;
+            line-height: 30px;
+            padding-top: 10px;
+        }
+
+        .news_card hr {
+            margin: 0px;
+            background-color: gray;
+            height: 2px;
+            border-width: 0px;
+        }
+
+        .news {
+            margin-left: 15px;
+            padding: 0px;
+        }
+
+        .news li {
+            list-style: disc;
+            line-height: 30px;
+            color: gray;
+            height: 30px;
+        }
+
+        .news li a:hover {
+            color: red;
+        }
+
+        .news li a::before{
+            content: "■";
+            font-size: 16px;
+            color: deeppink;
+            margin-right: 15px;
+        }
+
+        .news li a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body class="root">
+<header class="header">
+    <nav>导航</nav>
+</header>
+<main class="main">
+    <aside>
+        侧边导航
+    </aside>
+    <article>
+        正文
+    </article>
+    <article>
+        <h2>练习1,图片列表</h2>
+        <div>
+            <a class="image_list mb" href="javascript:;">
+                <img src="./assets/843186.png" style="width: 100%; height: 100%" alt="" srcset="">
+                <div>
+                    <li>超市周年庆</li>
+                    <li>超市周年庆</li>
+                </div>
+            </a>
+            <a class="image_list mb" href="javascript:;">
+                <img src="./assets/843186.png" style="width: 100%; height: 100%" alt="" srcset="">
+                <div>
+                    <li>超市周年庆</li>
+                    <li>超市周年庆</li>
+                </div>
+            </a>
+            <a class="image_list mb " href="javascript:;">
+                <img src="./assets/843186.png" style="width: 100%; height: 100%" alt="" srcset="">
+                <div>
+                    <li>超市周年庆</li>
+                    <li>超市周年庆</li>
+                </div>
+            </a>
+
+        </div>
+    </article>
+    <article style="background-color: pink;padding: 10px">
+        <h2>练习2</h2>
+        <ul class="list_ul">
+            <li><a href="#">家用电器</a></li>
+            <li><a href="#">手机</a>/ <a href="#">运营商</a>/ <a href="#">数码</a></li>
+            <li><a href="#">笔记本</a>/ <a href="#">电脑</a></li>
+            <li><a href="#">显示器</a></li>
+            <li><a href="#">手机</a>/ <a href="#">运营商</a>/ <a href="#">数码</a></li>
+            <li><a href="#">笔记本</a>/ <a href="#">电脑</a></li>
+            <li><a href="#">手机</a>/ <a href="#">运营商</a>/ <a href="#">数码</a></li>
+            <li><a href="#">笔记本</a>/ <a href="#">电脑</a></li>
+            <li><a href="#">显示器</a></li>
+            <li><a href="#">手机</a>/ <a href="#">运营商</a>/ <a href="#">数码</a></li>
+        </ul>
+    </article>
+    <article style="background-color: lightblue;padding: 15px">
+        <h3>练习3</h3>
+        <div class="news_card">
+            <hr>
+            <h4>体育</h4>
+            <a href="#">
+                <img src="./assets/843186.png" style="width: 300px;" alt="" srcset="">
+                <h3>神十五载人飞行任务看点</h3>
+            </a>
+            <ul class="news">
+                <li><a href="#">新闻新闻新闻</a></li>
+                <li><a href="#">新闻新闻新闻</a></li>
+                <li><a href="#">新闻新闻新闻</a></li>
+                <li><a href="#">新闻新闻新闻</a></li>
+                <li><a href="#">新闻新闻新闻</a></li>
+            </ul>
+        </div>
+    </article>
+    <article>
+        <h3>content-box & border-box</h3>
+        <div style="box-sizing: content-box; width: 100px;height: 100px; background-color: cadetblue;border: 10px solid red"></div>
+        <div style="box-sizing: border-box; width: 100px;height: 100px; background-color: cadetblue;border: 10px solid red"></div>
+    </article>
+    <section>
+        其他
+    </section>
+</main>
+<footer class="footer">
+    底部
+</footer>
+</body>
+</html>

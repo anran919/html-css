@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>swiper</title>
+    <style>
+        div ,body{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul {
+            padding-left: 0;
+        }
+        .main {
+            position: relative;
+        }
+        .image {
+            width: 400px;
+            height: 250px;
+        }
+        .image_list{
+            padding: 0px;
+            position: absolute;
+            top: 0;
+        }
+        .image_list li {
+            position: absolute;
+        }
+        .image_list li:nth-child(2) {
+           z-index: 2;
+        }
+        . dot_list{
+            position: absolute;
+            margin: 0px;
+            z-index: 99;
+            top: 240px;
+            left: 30px;
+        }
+        .dot_list li {
+            background-color: white;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <ul class="image_list">
+        <li><a href="javascript:"></a> <img class="image" src="./assets/843186.png" alt="" srcset=""> </li>
+        <li><a href="javascript:"></a> <img class="image" src="./assets/736082.jpg" alt="" srcset=""> </li>
+        <li><a href="javascript:"></a> <img class="image" src="./assets/699170.jpg" alt="" srcset=""> </li>
+        <li><a href="javascript:"></a> <img class="image" src="./assets/gou.png" alt="" srcset=""> </li>
+    </ul>
+    <ul class="dot_list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

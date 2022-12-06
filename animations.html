@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 800px;
+            height: 600px;
+            background-color: deeppink;
+            overflow: hidden;
+        }
+
+        .box1 div {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+
+        .box2 {
+            background-color: green;
+            transition: all 1s;
+            /*transition-delay: ;*/
+            /*transition-duration: {执行过渡的时间} ;*/
+            /*transition-property: width ,height;*/
+            /*transition-timing-function: ;n*/
+            text-align: center;
+            line-height: 100px;
+            color: #FFF;
+            margin-left: 0px;
+        }
+
+        .box1:hover .box2 {
+            line-height: 200px;
+            width: 220px;
+            height: 200px;
+            background-color: deeppink;
+            font-size: 30px;
+            margin-left: 600px;
+        }
+
+        .box3 {
+            background-color: green;
+            transition-timing-function: cubic-bezier(.06, 1.33, .42, -1.25);
+            transition-property: all;
+            transition-duration: 1s;
+            margin-left: 0px;
+        }
+
+        .box1:hover .box3 {
+            margin-left: 700px;
+        }
+
+        .box4 {
+            background-color: skyblue;
+            transition-timing-function: steps(3, end);
+            transition-property: all;
+            transition-duration: 1s;
+            margin-left: 0px;
+        }
+
+        .box1:hover .box4 {
+            margin-left: 700px;
+        }
+
+        .box5 {
+            height: 325px;
+            width: 184px;
+            margin: 0 auto;
+            background-image: url("./assets/animation01.webp");
+            background-position: 0;
+            transition: background-position 500ms steps(8);
+        }
+
+        .box5:hover {
+            background-position: -1472px;
+        }
+
+        .box6 {
+            height: 325px;
+            width: 184px;
+            margin: 0 auto;
+            background-image: url("./assets/animation01.webp");
+            animation: run 800ms steps(8) infinite;
+        }
+
+        /* 创建关键帧 */
+        @keyframes run {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -1472px 0;
+            }
+        }
+
+        .box7 {
+            height: 500px;
+            background-color: skyblue;
+            border-bottom: 50px solid green;
+            overflow: hidden;
+        }
+
+        .box8 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin-top: 0px;
+            animation: ball 3s infinite ease-in;
+        }
+
+        @keyframes ball {
+            from {
+                margin: 0;
+            }
+            25% {
+                margin: 400px 400px;
+                animation-timing-function: ease-in;
+            }
+            55% {
+                margin: 0 800px;
+                animation-timing-function: ease-in;
+            }
+
+            75% {
+                margin: 400px 1200px;
+                animation-timing-function: ease-in;
+            }
+            to {
+                margin: 400px 1500px;
+            }
+        }
+
+        .box9 {
+            height: 500px;
+            background-color: skyblue;
+            border-bottom: 100px green solid;
+        }
+
+        .box9 div {
+            float: left;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+
+        }
+
+        .box10 {
+            background-color: purple;
+            animation: dance 1s forwards linear infinite alternate 0.2s;
+        }
+
+        .box11 {
+            background-color: dodgerblue;
+            animation: dance 1s forwards linear infinite alternate 0.4s;
+        }
+
+        .box12 {
+            background-color: orange;
+            animation: dance 1s forwards linear infinite alternate 0.6s;
+        }
+
+        .box13 {
+            background-color: chocolate;
+            animation: dance 1s forwards linear infinite alternate 0.8s;
+        }
+
+        .box14 {
+            background-color: deeppink;
+            animation: dance 1s forwards linear infinite alternate 0.9s;
+        }
+
+        .box15 {
+            background-color: green;
+            animation: dance 1s forwards linear infinite alternate 1s;
+        }
+
+
+        @keyframes dance {
+            from {
+                margin-top: 0px;
+            }
+            to {
+                margin-top: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>过渡动画</h2>
+<div class="box1">
+    <div class="box2">
+        过渡动画
+    </div>
+    <div class="box3">
+        使用贝塞尔曲线
+    </div>
+    <div class="box4">
+        分布执行过渡效果
+    </div>
+</div>
+<div class="box5">
+    过渡动画,实现动画
+</div>
+<h3>动画</h3>
+<div class="box6"></div>
+<div class="box7">
+    <div class="box8"></div>
+</div>
+
+<div class="box9">
+    <div class="box10"></div>
+    <div class="box11"></div>
+    <div class="box12"></div>
+    <div class="box13"></div>
+    <div class="box14"></div>
+    <div class="box15"></div>
+</div>
+
+</body>
+</html>

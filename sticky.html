@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sticky,粘滞定位</title>
+    <style>
+        body{
+            height: 1800px;
+        }
+        .nav {
+            position: sticky;
+            top: 10px;
+            background-color: gray;
+            height: 200px;
+            line-height: 40px;
+        }
+
+        .nav_list {
+            display: block;
+            height: 100%;
+            width: 800px;
+            margin: 0 auto;
+            line-height: 60px;
+        }
+
+        .nav_list li {
+            padding-left: 10px;
+            padding-right: 10px;
+            float: left;
+            list-style: none;
+        }
+
+        .nav_list li:hover {
+            background-color: blue;
+        }
+
+        .nav_list li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body >
+<nav class="nav">
+    <ul class="nav_list">
+        <li><a href="javascript:">HTML/CSS </a></li>
+        <li><a href="javascript:">Browser Side</a></li>
+        <li><a href="javascript:">HTML/CSS </a></li>
+        <li><a href="javascript:">Browser Side</a></li>
+        <li><a href="javascript:">HTML/CSS </a></li>
+        <li><a href="javascript:">Browser Side</a></li>
+    </ul>
+    <div>
+        111
+    </div>
+</nav>
+</body>
+</html>

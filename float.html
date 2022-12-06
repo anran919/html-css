@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float,浮动,脱离文档流</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            background-color: skyblue;
+        }
+
+        .box1, .box2, .box3 {
+            float: left;
+            height: 100px;
+            width: 100px;
+        }
+
+        .box1 {
+            background-color: deeppink;
+        }
+
+        .box2 {
+            clear: left;
+            background-color: orange;
+        }
+
+        .box3 {
+            clear: left;
+            background-color: seagreen;
+        }
+
+        .nav {
+            background-color: gray;
+            height: 100%;
+            line-height: 40px;
+        }
+
+        .nav_list {
+            display: block;
+            height: 100%;
+            width: 800px;
+            margin: 0 auto;
+            line-height: 60px;
+        }
+
+        .nav_list li {
+            padding-left: 10px;
+            padding-right: 10px;
+            float: left;
+            list-style: none;
+        }
+
+        .nav_list li:hover {
+            background-color: blue;
+        }
+
+        .nav_list li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .main {
+            width: 1000px;
+            height: 500px;
+            background-color: #bfa;
+            margin: 10px auto;
+            color: white;
+        }
+
+        .footer {
+            width: 1000px;
+            height: 200px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .aside, .article, .section {
+            float: left;
+            height: 100%;
+        }
+
+        .aside {
+            background-color: orange;
+            width: 200px;
+        }
+
+        .article {
+            background-color: skyblue;
+            width: 580px;
+            margin: 0 10px;
+        }
+
+        .section {
+            width: 200px;
+            background-color: lightgreen;
+        }
+
+        .outer {
+            border: red 5px solid;
+        }
+
+        .inner {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /*.outer::after {*/
+        /*    content: '';*/
+        /*    display: table;*/
+        /*    clear: left;*/
+        /*}*/
+
+        .m_outer {
+            width: 200px;
+            height: 200px;
+            background-color: white
+        }
+        /*.m_outer::before{*/
+        /*    content: '';*/
+        /*    display: table;*/
+        /*}*/
+        .m_inner {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin-top: 100px;
+        }
+        .clear-fix::before,
+        .clear-fix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<header style="width: 1000px;margin: 0 auto;height: 60px">
+    <nav class="nav">
+        <ul class="nav_list">
+            <li><a href="javascript:">HTML/CSS </a></li>
+            <li><a href="javascript:">Browser Side</a></li>
+            <li><a href="javascript:">HTML/CSS </a></li>
+            <li><a href="javascript:">Browser Side</a></li>
+            <li><a href="javascript:">HTML/CSS </a></li>
+            <li><a href="javascript:">Browser Side</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+    <aside class="aside">导航</aside>
+    <article class="article">
+        <article>
+            <div style="border: red 5px solid;overflow: auto">
+                <div style="float:left; background-color: yellow;height: 50px;width: 50px;color: red;font-size: 2rem;text-align: center">
+                    1
+                </div>
+                <div>
+                    2
+                </div>
+            </div>
+            <div>
+                3
+            </div>
+        </article>
+        <article>
+            <!--            <div class="box1">1</div>-->
+            <!--            <div class="box2">2</div>-->
+            <!--            <div class="box3">3</div>-->
+        </article>
+        <article>
+            <div class="outer clear-fix">
+                <div class="inner">
+                    inner
+                </div>
+            </div>
+        </article>
+        <article>
+            <h3>解决外边距重叠</h3>
+            <div class="m_outer clear-fix">
+                <div class="m_inner "></div>
+            </div>
+        </article>
+    </article>
+    <section class="section">
+        section
+    </section>
+</main>
+
+<footer class="footer">
+    <div>
+        &copy;2022-2027
+        footer
+    </div>
+</footer>
+
+</body>
+</html>

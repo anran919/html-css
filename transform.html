@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变形平移</title>
+    <style>
+        .box1,.box2,.box4{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .box1{
+            margin-top: 200px;
+            background-color: yellow;
+            /*transform: translate(100px,100px);*/
+            transform: rotateZ(50deg);
+
+        }
+        /*固定宽度的居中*/
+        /*.box3{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: chocolate;*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    bottom: 0;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*自动宽度的居中 */
+        .box3{
+            display: inline;
+            width: 200px;
+            background-color: chocolate;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .box2 {
+            background-color: deeppink;
+            transition: all .3s;
+        }
+        .box2:hover{
+            background-color: green;
+            transform:  translateY(-15px) ;
+            box-shadow: 1px 2px 10px rgba(0,0,0,.5);
+        }
+        .box4{
+            background-color: silver;
+            animation: xz 3s infinite;
+        }
+        /*.box4:hover{*/
+        /*    transform: rotate(360deg);*/
+        /*}*/
+        @keyframes xz {
+            from{
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">111</div>
+    <div class="box4">旋转</div>
+
+
+</body>
+</html>

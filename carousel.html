@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        .main{
+            background-color: yellow;
+            position: relative;
+            height: 100%;
+        }
+        .img_list li {
+            position: absolute;
+            list-style: none;
+        }
+
+        .img_list li:nth-child(2) {
+            z-index: 10;
+        }
+
+        .img_list li a img {
+            width: 400px;
+            height: 300px;
+        }
+
+        .dot {
+            /*background-color: blue;*/
+            color: red;
+            width: 300px;
+            height: 20px;
+            position: absolute;
+            z-index: 99;
+            top: 260px;
+            left: 75px;
+            text-align: center;
+            margin: auto 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*right: 0;*/
+            /*margin: auto;*/
+        }
+
+        .dot li {
+            float: left;
+            list-style: none;
+            margin-left: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+
+        }
+
+        .clear-fix::before,
+        .clear-fix::after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <ul class="img_list">
+        <li>
+            <a href="#"><img src="./assets/843186.png" alt="1"></a>
+        </li>
+        <li>
+            <a href="#"><img src="./assets/699170.jpg" alt="1"></a>
+        </li>
+        <li>
+            <a href="#"><img src="./assets/736082.jpg" alt="1"></a>
+        </li>
+        <li>
+            <a href="#"><img src="./assets/gou.png" alt="1"></a>
+        </li>
+    </ul>
+    <ul class="dot">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

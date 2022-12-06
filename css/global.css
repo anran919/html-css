@@ -1,0 +1,152 @@
+article{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+/* 后代选择器  start*/
+/*ol > li {*/
+/*    list-style-type: none;*/
+/*}*/
+
+
+/*后面所愿元素*/
+/*li ~ li{*/
+/*    background-color: red;*/
+/*}*/
+
+/* 后面一个元素 */
+/*li + li{*/
+/*    background-color: red;*/
+/*}*/
+
+
+/*------属性选择器 ------*/
+li[title] {
+    color: green;
+}
+
+li[title="雄关漫道真如铁"] {
+    color: paleturquoise;
+}
+
+/*正则,^开头,*任意,$结尾*/
+li[title ^="java"] {
+    color: deeppink;
+}
+
+/*------属性选择器 end------*/
+
+/*------伪类选择器 start------*/
+ol >li:first-child{
+    background-color: blue;
+    color: white;
+}
+
+ol > li:last-child {
+    background-color: green;
+}
+
+ol > li:nth-child(2){
+    background-color: yellow;
+}
+
+ol > li:nth-child(n){
+    margin: 10px;
+    font-size: 17px;
+}
+
+ol > li:nth-child(2n){
+}
+
+ol > li:nth-child(2n){
+   border: 1px deeppink solid;
+}
+
+ol > li:nth-child(2n+1){
+    border: 1px deepskyblue solid;
+}
+
+a:link {
+    color: deeppink;
+}
+a:visited {
+    color: blueviolet;
+}
+
+p::first-letter{
+    font-size: 30px;
+}
+p::first-line{
+    background-color: green;
+    border-bottom: 1px red solid;
+}
+p::selection {
+    background-color: deeppink;
+}
+p::before {
+    content: "😁😁";
+}
+p::after{
+    content: "🐶🐶🐶";
+}
+/*------伪类选择器 end ------*/
+/*------rm, rem start ------*/
+.body{
+    font-size: 16px;
+}
+.section_content{
+    width: 20em;
+    height: 20em;
+    background-color: green;
+}
+.section_box{
+    width: 10em;
+    height: 10em;
+    background-color: hotpink;
+}
+
+.section_content1{
+    width: 20rem;
+    height: 20rem;
+    background-color: green;
+}
+.section_box1{
+    width: 10rem;
+    height: 10rem;
+    background-color: hotpink;
+}
+
+/*------rm, rem  end------*/
+
+
+/*------文档流,布局 start ------*/
+.root{
+    background-color: white;
+    font-size: 17px;
+}
+.header{
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    height: 10rem;
+}
+.main{
+    background-color: gray;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    height: 12rem;
+}
+
+
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 10px red solid;
+    padding: 20px;
+}
+/*------文档流,布局 end ------*/
