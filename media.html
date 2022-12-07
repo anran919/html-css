@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>媒体查询</title>
+    <style>
+        /**
+           all 所有设备
+           print 打印设备
+           screen 带屏幕的设备
+           speech 屏幕阅读器
+           width,height 视口的宽度和高度
+           @media (width :500px)
+           @media print,screen {} 可以使用逗号分割多个
+         */
+        @media all {
+            body {
+                background-color: #bfa;
+            }
+        }
+
+        /*宽度小于600px body设置为deeppink*/
+        /*设置max-width,min-width,我们称之为断点*/
+        /*常用的断点768(小屏),992(中屏),1200(大屏幕)*/
+        /* and:并且 ',': 或者*/
+        /*完整写法only screen and (min-width: 768px) and (max-width: 992px)*/
+        @media (min-width: 768px) and (max-width: 992px){
+            body {
+                background-color: deeppink;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
